@@ -8,26 +8,30 @@ import pandas as pd
 import numpy as np
 app=FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"Hello learners!"}
 
-@app.get('/about')
+df = pd.read_csv('1000_ml_jobs_us.csv')
+df.drop(columns=['Unnamed: 0'], inplace=True)
+df.dropna(inplace=True)
+
+
+@app.get('/')
 def read_about():
     return  "This is a simple API to demonstrate HTTP methods."
 
-def view_csv():
-    df = pd.read_csv('1000_ml_jobs_us.csv')
-    return df.sample(5)  
 
-@app.get('/view_data')  # lowercase URLs are preferred
+@app.get('/view')  # lowercase URLs are preferred
 def view_data():
-    data = view_csv()
-    return data.to_dict(orient="records") 
+    # Convert the DataFrame to a dictionary
+    
+    data = df.to_dict(orient="records")
+    return data
+
+
 def company_list():
-    df = pd.read_csv('1000_ml_jobs_us.csv')
+    
     comp_list=df['company_name'].unique()
     return comp_list
+
 @app.get('/companies')
 def get_company_list():
     data = company_list()
