@@ -1,0 +1,46 @@
+{
+    "2025-01": {
+        "customer_id": "2025-02",
+        "item_name": "computer",
+        "price": 1.0,
+        "quantity": 1,
+        "category": "electronics",
+        "description": "des",
+        "total_price": 1.0,
+        "total_price_with_discount": 1.0,
+        "total_price_with_tax": 1.2
+    },
+    "2025-2": {
+        "customer_id": "2025-02",
+        "item_name": "string",
+        "price": 1.0,
+        "quantity": 1,
+        "category": "furniture",
+        "description": "string",
+        "total_price": 1.0,
+        "total_price_with_discount": 1.0,
+        "total_price_with_tax": 1.15
+    },
+    "2025-3": {
+        "customer_id": "2025-02",
+        "item_name": "string",
+        "price": 1.0,
+        "quantity": 1,
+        "category": "furniture",
+        "description": "string",
+        "total_price": 1.0,
+        "total_price_with_discount": 1.0,
+        "total_price_with_tax": 1.15
+    },
+    "2025-4": {
+        "customer_id": "2025-1",
+        "item_name": "mobile",
+        "price": 1000.0,
+        "quantity": 2,
+        "category": "electronics",
+        "description": "string",
+        "total_price": 2000.0,
+        "total_price_with_discount": 1900.0,
+        "total_price_with_tax": 2300.0
+    }
+}
